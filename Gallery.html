@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hondabigwing | Gallery</title>
+    <link rel="stylesheet" href="SCSS/gallery.css">
+    <!--icon link-->
+    <script src="https://kit.fontawesome.com/b0e6f5cf89.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--jquery file-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!--3d model script-->
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+<body id="body">
+    <header>
+        <div class="nav"></div>
+        <nav class="navbar">
+           <div class="logo"></div>
+           <ul class="menus">
+               <li><a href="index.html" rel = "home">our story</a></li>
+               <li><a href="#" rel = "motorcycles">motorcycles</a></li>
+               <li><a href="Gallery.html">Gallery</a></li>
+               <li><a href="#">reach us</a></li>
+               <li><a href="Booknow.html" style="color:red">Book now</a></li>
+               <li><a href="#">services</a></li>
+           </ul>
+           
+           <ul class="icon-box">
+                  <li><a  href="#" rel = "insta"><i class='fab fa-instagram'></i></a></li>
+                  <li><a href="#" rel = "facebook"><i class='fab fa-facebook-f'></i><a></li>
+                  <li> <a  href="#"  rel = "twit"><i class='fab fa-twitter'></i></a></li>
+                  <li><a  href="#" rel = "yt"><i class='fab fa-youtube'></i></a></li>
+            </ul>
+
+            <div class="humbarger">
+                <button id="nav-btn" type="button" rel = "Hum_btn" onclick="openNav()">
+                    <i class='fas fa-align-justify'></i>
+                </button>
+            </div>
+        </nav>
+        <!---------------hidden bikes menu---Use for Small media-------------->
+        <div id="hidden-navbar">
+            <button type="button" id="c-btn" onclick="closeNav()">
+                <i class="fa fa-close"></i>
+            </button>
+             <ul class="box-1">
+                <li><a href="index.html" >our story</a></li>
+                <li><a href="#" >motorcycles</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="#">reach us</a></li>
+                <li><a href="Booknow.html" style="color:red">Book now</a></li>
+                <li><a href="#">services</a></li>
+             </ul>
+             <model-viewer  class="center-fit" src="Motorcycle.glb" alt="A 3D model" auto-rotate camera-controls style="width: 60%; height:84vh; top:0px; position: relative; background-color:#111111;"
+                camera-orbit="-30deg" loading="eager"></model-viewer>
+             </div>
+        </div>
+    </header>
+    <!---main content of this page -- gallery images-->
+    <main>
+        <div class="img-grid">
+                <div>
+                    <img src="./images/G_img1.jpg" alt="">
+                </div>
+                <div><img src="./images/G_img2.jpg" alt=""></div>
+                <div><img src="./images/G_img3.jpg" alt=""></div>
+                <div><img src="./images/G_img4.jpg" alt=""></div>
+                <div><img src="./images/G_img5.jpg" alt=""></div>
+                <div><img src="./images/G_img6.jpg" alt=""></div>
+                <div><img src="./images/G_img7.jpg" alt=""></div>
+                <div><img src="./images/G_img8.jpg" alt=""></div>
+                <div><img src="./images/G_img9.jpg" alt=""></div>
+        </div>
+    </main>
+    <script>
+     
+     function openNav() {
+            let x =  document.getElementById("hidden-navbar").style.visibility= "visible";
+            if(x == "visible"){
+                document.getElementById("body").style.overflow = "hidden";
+            }else{
+                document.getElementById("body").style.overflow = "visible";
+            }
+            
+        }
+    
+
+        function closeNav() {
+            let y = document.getElementById("hidden-navbar").style.visibility = "hidden";
+            if(y == "hidden"){
+                document.getElementById("body").style.overflow = "visible";
+            }else{
+                document.getElementById("body").style.overflow = "hidden";
+            }
+        }
+    
+    </script>
+    <!---webssite footer-->
+    <footer>
+        <div class="box1">
+            <img src="./images/honda_logo.png" alt="">
+        </div>
+        <ul class = "ul1">
+            <li><a href="">our story</a></li>
+            <li><a href="">media center</a></li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">contact us</a></li>
+            <li><a href="">recall campaign</a></li>
+            <li><a href="">Creative Gallery</a></li>
+        </ul>
+        <div class="box3">
+            <ul>
+               <li><a  href="#"><i class='fab fa-instagram'></i></a></li>
+               <li><a href="#"><i class='fab fa-facebook-f'></i><a></li>
+               <li> <a  href="#"><i class='fab fa-twitter'></i></a></li>
+               <li><a  href="#" ><i class='fab fa-youtube'></i></a></li>
+            </ul>
+        </div>
+        <ul class="ul2">
+           <a href="#">sitemap</a></li>
+           <li><li><a href="#">disclaimer</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">visit corporate website</a></li>
+           
+       </ul>
+    </footer>
+
+</body>
+</html>

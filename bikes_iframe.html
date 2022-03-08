@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikes</title>
+    <link rel="stylesheet" href="./SCSS/bikes_if.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+    <body>
+        <div class="menu-box">
+            <ul class="box1">
+                <li><a id="a1" href="#">cb300r</a></li>
+                <li><a id="a2" href="#">h'ness cb350</a></li>
+                <li><a id="a3" href="#">cb350rs</a></li>
+                <li><a id="a4" href="#">cb500x</a></li>
+                <li><a id="a5" href="#">cb650r</a></li>
+                <li><a id="a6" href="#">cbr650r</a></li>
+                <li><a id="a7" href="#">cbr1000rr-r</a></li>
+                <li><a id="a8" href="#">africa twin</a></li>
+                <li><a id="a9" href="#">gold wing tour</a></li>
+            </ul>
+            <div class="box2">
+                <div class="box2_box1">
+                    <div class="img">
+                        <img src="./images/cb300r_new22.png" alt="first bike image" id="img1" >
+                    </div>
+                   
+                </div>
+                <div class="box2_box2">
+                        <div class="para-box1">
+                            <img src="./images/para_img1.png" alt="">
+                        </div>
+                        <div class="para-box2">
+                             <p>Adding a modern twist to the retro café-racer 
+                                 style, the new CB300R is built to give its 
+                                 rider the perfect BigBike to show-off all 
+                                 of his unique moves.
+                            </p>
+                        </div>
+                        <div class="para-box3">
+                            <a href="#">View Bike</a>
+                        </div>
+                </div>
+            </div>
+        </div> 
+        <!---javascript and jquery-->
+        <script>
+            $("#a1").mouseenter(function(){
+                let x = document.getElementById("img1").src="./images/cb300r_new22.png";
+                
+            });
+            $("#a2").mouseenter(function(){
+                document.getElementById("img1").src="./images/img2.png";
+            });
+            $("#a3").mouseenter(function(){
+                document.getElementById("img1").src="./images/img3.png";
+            });
+            $("#a4").mouseenter(function(){
+                document.getElementById("img1").src="./images/img4.png";
+            });
+            $("#a5").mouseenter(function(){
+                document.getElementById("img1").src="./images/img5.png";
+            });
+            $("#a6").mouseenter(function(){
+                document.getElementById("img1").src="./images/img6.png";
+            });
+            $("#a7").mouseenter(function(){
+                document.getElementById("img1").src="./images/img7.png";
+            });
+            $("#a8").mouseenter(function(){
+                document.getElementById("img1").src="./images/img8.png";
+            });
+            $("#a9").mouseenter(function(){
+                document.getElementById("img1").src="./images/img9.png";
+            });
+        </script>
+        
+            
+        
+    </body>
+</html>

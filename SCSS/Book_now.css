@@ -1,0 +1,970 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Monoton&family=Noto+Serif&family=Philosopher&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Fredoka+One&family=Monoton&family=Noto+Serif&family=Philosopher&family=Roboto:wght@100&display=swap");
+.nav {
+  background: red;
+  height: 16vh;
+  visibility: hidden;
+}
+
+.navbar {
+  background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 16vh;
+  z-index: 1;
+  top: 0;
+}
+
+.navbar div[class="logo"] {
+  width: 15%;
+  background: url("../images/honda_logo.png") no-repeat center;
+  background-size: 85px 85px;
+  z-index: 999;
+}
+
+.navbar ul[class="menus"] {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar ul[class="menus"] li {
+  list-style: none;
+}
+
+.navbar ul[class="menus"] a {
+  text-decoration: none;
+  color: #808079;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navbar ul[class="menus"] a[rel="home"] {
+  color: white !important;
+}
+
+.navbar ul[class="menus"] a[rel="home"]:hover {
+  color: black !important;
+}
+
+.navbar ul[class="menus"] a:hover {
+  color: black;
+  background: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.navbar ul[class="menus"] a[rel="arrow"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul[class="menus"] a[rel="arrow"] i {
+  font-size: 2em;
+  margin-left: -5px;
+}
+
+.navbar ul[class="menus"] ul[class="reach_sub_menu"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  background: #111111;
+  top: 101%;
+  right: 28%;
+  gap: 15px;
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  outline: 2px solid black;
+}
+
+.navbar ul[class="icon-box"] {
+  width: 15%;
+  height: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: flex;
+}
+
+.navbar ul[class="icon-box"] li {
+  list-style: none;
+}
+
+.navbar ul[class="icon-box"] a {
+  color: white;
+  font-size: x-large;
+}
+
+.navbar div[class="humbarger"] {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.navbar div[class="humbarger"] button {
+  background-color: #111111;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar div[class="humbarger"] i {
+  font-size: x-large;
+  padding: 6px;
+  color: white;
+}
+
+@media screen and (max-width: 898px) {
+  .navbar div[class="logo"] {
+    width: 60%;
+    margin-left: -40px;
+  }
+  .navbar ul[class="menus"] {
+    display: none;
+  }
+  .navbar ul[class="icon-box"] {
+    width: 30%;
+  }
+  .navbar div[class="humbarger"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  .navbar div[class="logo"] {
+    background-position: left;
+    margin-left: 70px;
+    background-size: 70px 70px;
+  }
+  .navbar ul[class="menus"] {
+    display: none;
+  }
+  .navbar ul[class="icon-box"] {
+    width: 30%;
+    display: none;
+  }
+  .navbar div[class="humbarger"] {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .navbar ul[class="menus"] {
+    font-weight: 600;
+    font-size: small;
+    width: 65%;
+  }
+}
+
+#hidden-navbar {
+  width: 100%;
+  height: 100vh;
+  background: #111111;
+  position: fixed;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#hidden-navbar button {
+  position: absolute;
+  background: #111111;
+  border-radius: 70px;
+  z-index: 1;
+  left: 84%;
+  top: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+#hidden-navbar button i {
+  font-size: xx-large;
+  padding: 10px 10px;
+  color: white;
+}
+
+#hidden-navbar .box-1 {
+  width: 40%;
+  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hidden-navbar .box-1 li, #hidden-navbar .box-1 a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+#hidden-navbar .box-1 a {
+  font-size: clamp(1.3rem, 5vw, 1.6rem);
+  text-transform: capitalize;
+  -webkit-transition-property: color, font-style,margin-left;
+  transition-property: color, font-style,margin-left;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+#hidden-navbar .box-1 a:hover {
+  color: red;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+#hidden-navbar .box2, #hidden-navbar main .head-box .box3, main .head-box #hidden-navbar .box3 {
+  width: 60%;
+}
+
+@media screen and (max-width: 378px) {
+  #hidden-navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #hidden-navbar .box-1 {
+    gap: 25px;
+    margin: 116px auto;
+    height: 21vh;
+    position: relative;
+    top: 45px;
+  }
+  #hidden-navbar .center-fit {
+    margin: auto;
+    min-width: 100%;
+    padding-bottom: 25px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../images/footerBg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 150px 0 0 0;
+  gap: 0px;
+}
+
+footer .box1 {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  height: 30vh;
+}
+
+footer ul {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .ul1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: clamp(15px, 2vw, 18px);
+  text-transform: uppercase;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  height: 30vh;
+}
+
+footer .box3 {
+  height: 25vh;
+}
+
+footer .box3 ul {
+  width: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
+}
+
+footer .box3 ul a {
+  font-size: clamp(25px, 3vw, 30px);
+}
+
+footer .ul2 {
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: clamp(14px, 3vw, 16px);
+  text-transform: uppercase;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 60%;
+  word-spacing: 3px;
+}
+
+@media screen and (max-width: 754px) {
+  footer {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 20px;
+  }
+  footer .ul1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 40vh;
+    gap: 20px;
+  }
+  footer .box3 ul {
+    gap: 20px;
+  }
+  footer .ul2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 50vh;
+    gap: 15px;
+    width: 80%;
+  }
+}
+
+body {
+  background: #111111;
+}
+
+#hidden-navbar .box-1 a {
+  font-size: clamp(21px, 5vw, 1.6rem);
+}
+
+main .bg img {
+  width: 100%;
+  min-width: 100%;
+}
+
+main .book-head {
+  width: 100%;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+}
+
+main .book-head .box1 {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+main .book-head .box1 h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Fredoka One", "cursive";
+  letter-spacing: 2px;
+}
+
+main .book-head .box1 img {
+  width: 70px;
+  height: 70px;
+  padding-left: 10px;
+}
+
+main .book-head .box2, main .book-head .head-box .box3, main .head-box .book-head .box3 {
+  width: 50%;
+  background: #111111;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .book-head .box2 img, main .book-head .head-box .box3 img, main .head-box .book-head .box3 img {
+  width: clamp(250px, 10vh, 300px);
+  border-radius: 350px;
+  padding: 10px 10px;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+main .head-box {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .head-box .box1 {
+  width: 30%;
+  background: white;
+  height: 10vh;
+  font-size: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+main .head-box .box1 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+}
+
+main .head-box .box1 i {
+  font-size: 1.5em;
+}
+
+main .head-box .box2, main .head-box .box3 {
+  width: 30%;
+  height: 10vh;
+  background: red;
+  cursor: context-menu;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+main .head-box .box2 i, main .head-box .box3 i {
+  font-size: 2em;
+}
+
+main .head-box .box2 h2, main .head-box .box3 h2 {
+  font-size: 1.3em;
+}
+
+main form .row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 25px auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main form .row1 .row1_col1 {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  padding-left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main form .row1 .row1_col1 select {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 10vh;
+  border: 1px solid white;
+  background-color: #111111;
+  color: white;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  padding-left: 40%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+main form .row1 .row1_col1 select option {
+  text-transform: capitalize;
+  color: white;
+}
+
+main form .row1 .row1_col1 select:focus {
+  outline: none;
+}
+
+main form .row1 .row1_col2, main form .row1 .row1_col3 {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  background: #805700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main form .row1 .row1_col2 input, main form .row1 .row1_col3 input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 10vh;
+  border: 1px solid white;
+  background: #111111;
+  color: white;
+  font-size: 1.2em;
+  padding-left: 10%;
+  text-transform: uppercase;
+}
+
+main form .row1 .row1_col2 input:focus, main form .row1 .row1_col3 input:focus {
+  outline: none;
+  background: white;
+  color: white;
+}
+
+main form .row1 .row1_col2 input::-webkit-input-placeholder, main form .row1 .row1_col3 input::-webkit-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row1 .row1_col2 input:-ms-input-placeholder, main form .row1 .row1_col3 input:-ms-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row1 .row1_col2 input::-ms-input-placeholder, main form .row1 .row1_col3 input::-ms-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row1 .row1_col2 input::placeholder, main form .row1 .row1_col3 input::placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row1 .row1_col3 {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  background: #76cc76;
+}
+
+main form .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main form .row2 .row2_col1, main form .row2 .row2_col2 {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main form .row2 .row2_col1 input, main form .row2 .row2_col2 input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 10vh;
+  border: 1px solid white;
+  background: #111111;
+  color: white;
+  font-size: 1.2em;
+  padding-left: 10%;
+  text-transform: uppercase;
+}
+
+main form .row2 .row2_col1 input:focus, main form .row2 .row2_col2 input:focus {
+  outline: none;
+  background: white;
+  color: white;
+}
+
+main form .row2 .row2_col1 input::-webkit-input-placeholder, main form .row2 .row2_col2 input::-webkit-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row2 .row2_col1 input:-ms-input-placeholder, main form .row2 .row2_col2 input:-ms-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row2 .row2_col1 input::-ms-input-placeholder, main form .row2 .row2_col2 input::-ms-input-placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row2 .row2_col1 input::placeholder, main form .row2 .row2_col2 input::placeholder {
+  color: white;
+  padding: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+main form .row2 .row2_col2 {
+  -ms-flex-preferred-size: 56%;
+      flex-basis: 56%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main form .row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 25px auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main form .row3 button {
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  height: 10vh;
+  background: red;
+  border: 2px solid red;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  border-radius: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 890px) {
+  html {
+    font-size: 70%;
+  }
+  main .bg {
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+  }
+  main .bg .img {
+    background: url("../images/Book_now_banner.jpg") no-repeat center;
+    height: 40vh;
+    background-size: cover;
+  }
+  main .bg img {
+    display: none;
+  }
+  main .head-box {
+    font-size: 1.4em;
+    margin-top: -50px;
+  }
+  main .head-box div {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  html {
+    font-size: 60%;
+  }
+  main .book-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 60vh;
+  }
+  main .book-head .box1 {
+    margin: 0 auto;
+    width: 100%;
+  }
+  main .book-head .box2, main .book-head .head-box .box3, main .head-box .book-head .box3 {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  html {
+    font-size: 70%;
+  }
+  main .head-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  main .head-box .box1, main .head-box .box2, main .head-box .box3, main .head-box .box3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main form .row1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  main form .row1 div[class*=row1] {
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  main form .row1 .row1_col1 select {
+    padding-left: 45%;
+  }
+  main form .row1 .row1_col2 input, main form .row1 .row1_col3 input {
+    padding-left: 10%;
+  }
+  main form .row1 .row1_col2 input:focus, main form .row1 .row1_col3 input:focus {
+    padding-left: 10%;
+  }
+  main form .row1 .row1_col2 input::-webkit-input-placeholder, main form .row1 .row1_col3 input::-webkit-input-placeholder {
+    padding-left: 30%;
+  }
+  main form .row1 .row1_col2 input:-ms-input-placeholder, main form .row1 .row1_col3 input:-ms-input-placeholder {
+    padding-left: 30%;
+  }
+  main form .row1 .row1_col2 input::-ms-input-placeholder, main form .row1 .row1_col3 input::-ms-input-placeholder {
+    padding-left: 30%;
+  }
+  main form .row1 .row1_col2 input::placeholder, main form .row1 .row1_col3 input::placeholder {
+    padding-left: 30%;
+  }
+  main form .row2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  main form .row2 div[class*=row2] {
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  main form .row2 .row2_col1 input, main form .row2 .row2_col2 input {
+    padding-left: 10%;
+  }
+  main form .row2 .row2_col1 input:focus, main form .row2 .row2_col2 input:focus {
+    padding-left: 10%;
+  }
+  main form .row2 .row2_col1 input::-webkit-input-placeholder, main form .row2 .row2_col2 input::-webkit-input-placeholder {
+    padding-left: 20%;
+  }
+  main form .row2 .row2_col1 input:-ms-input-placeholder, main form .row2 .row2_col2 input:-ms-input-placeholder {
+    padding-left: 20%;
+  }
+  main form .row2 .row2_col1 input::-ms-input-placeholder, main form .row2 .row2_col2 input::-ms-input-placeholder {
+    padding-left: 20%;
+  }
+  main form .row2 .row2_col1 input::placeholder, main form .row2 .row2_col2 input::placeholder {
+    padding-left: 20%;
+  }
+  main form .row3 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=Book_now.css.map */

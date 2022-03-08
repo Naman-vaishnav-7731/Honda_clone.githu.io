@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book now | Honda | Honda</title>
+    <link rel="stylesheet" href="SCSS/Book_now.css">
+    <!--icon link-->
+    <script src="https://kit.fontawesome.com/b0e6f5cf89.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--jquery file-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!--3d model script-->
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+<body id="body">
+    <header>
+        <div class="nav"></div>
+        <nav class="navbar">
+           <div class="logo"></div>
+           <ul class="menus">
+               <li><a href="index.html" rel = "home">our story</a></li>
+               <li><a href="#" rel = "motorcycles">motorcycles</a></li>
+               <li><a href="Gallery.html">Gallery</a></li>
+               <li><a href="#">reach us</a></li>
+               <li><a href="Booknow.html" style="color:red">Book now</a></li>
+               <li><a href="#">services</a></li>
+           </ul>
+           
+           <ul class="icon-box">
+                  <li><a  href="#" rel = "insta"><i class='fab fa-instagram'></i></a></li>
+                  <li><a href="#" rel = "facebook"><i class='fab fa-facebook-f'></i><a></li>
+                  <li> <a  href="#"  rel = "twit"><i class='fab fa-twitter'></i></a></li>
+                  <li><a  href="#" rel = "yt"><i class='fab fa-youtube'></i></a></li>
+            </ul>
+
+            <div class="humbarger">
+                <button id="nav-btn" type="button" rel = "Hum_btn" onclick="openNav()">
+                    <i class='fas fa-align-justify'></i>
+                </button>
+            </div>
+        </nav>
+        <!---------------hidden bikes menu---Use for Small media-------------->
+        <div id="hidden-navbar">
+            <button type="button" id="c-btn" onclick="closeNav()">
+                <i class="fa fa-close"></i>
+            </button>
+             <ul class="box-1">
+                <li><a href="#" >our story</a></li>
+                <li><a href="#" >motorcycles</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">reach us</a></li>
+                <li><a href="#" style="color:red">Book now</a></li>
+                <li><a href="#">services</a></li>
+             </ul>
+             <model-viewer  class="center-fit" src="Motorcycle.glb" alt="A 3D model" auto-rotate camera-controls style="width: 60%; height:84vh; top:0px; position: relative; background-color:#111111;"
+                camera-orbit="-30deg" loading="eager"></model-viewer>
+             </div>
+        </div>
+    </header>
+    <!--javascript-->
+    <script>
+        function openNav() {
+               let x =  document.getElementById("hidden-navbar").style.visibility= "visible";
+               if(x == "visible"){
+                   document.getElementById("body").style.overflow = "hidden";
+               }else{
+                   document.getElementById("body").style.overflow = "visible";
+               }
+            }
+       
+        function closeNav() {
+               let y = document.getElementById("hidden-navbar").style.visibility = "hidden";
+               if(y == "hidden"){
+                   document.getElementById("body").style.overflow = "visible";
+               }else{
+                   document.getElementById("body").style.overflow = "hidden";
+               }
+           }
+       </script>
+       <!--navbar closed -->
+       <main>
+           <!--background Book now banner-->
+           <div class="bg">
+            <img src="./images/Book_now_banner.jpg" alt="Book image">
+            <div class="img"></div>
+           </div>
+           <!--Book Now Header-->
+           <div class="book-head">
+               <div class="box1">
+                   <img src="./images/Book_logo.png" alt="Book-logo">
+                   <h1>Book Now</h1>
+               </div>
+               <div class="box2">
+                    <img src="./images/Book_now_gif.gif" alt="">
+               </div>
+           </div>
+           <!---main form -->
+            <div class="head-box">
+                <div class="box1">
+                    <i class='fas fa-user-alt'></i>
+                    <a href="#">personal info</a>
+                </div>
+                <div class="box2">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>product & dealer info</h2>
+                </div>
+                <div class="box3">
+                    <i class='far fa-credit-card'></i>
+                    <h2>make payment</h2>
+                </div>
+            </div>
+            <!---form for book the product-->
+            <form action="#" method="#">
+                <!-------row 1-------->
+                <div class="row1">
+                    <div class="row1_col1">
+                    <select name="Title" id="Title" required="required">
+                        <option value="none"> Title</option> 
+                        <option value="MR">mr</option>
+                        <option value="MS">ms</option>
+                    </select>
+                    </div>
+                    <div class="row1_col2">
+                        <input id="u_name" type="text" name="User_name" placeholder="Enter Name" required>
+                    </div>
+                    <div class="row1_col3">
+                        <input id="u_email" type="email" name="user_email" placeholder="Enter Email" required> 
+                    </div>
+                </div>
+                <!-------row2-------->
+                <div class="row2">
+                    <div class="row2_col1">
+                        <input id="u_mob_no" type="tel" name="User_mob_no" maxlength="10"  placeholder="Enter Mobile No."required>
+                    </div>
+                    <div class="row2_col2">
+                        <input id="u_pan_no" type="text" name="user_pan_no" maxlength="10" placeholder="Enter pan Number" required> 
+                    </div>
+                </div>
+                <!--------row3--------->
+                <div class="row3">
+                    <button type="submit">next</button>
+                </div>
+                
+
+                    
+            </form>
+       </main>
+        <!---webssite footer-->
+     <footer>
+        <div class="box1">
+            <img src="./images/honda_logo.png" alt="">
+        </div>
+        <ul class = "ul1">
+            <li><a href="">our story</a></li>
+            <li><a href="">media center</a></li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">contact us</a></li>
+            <li><a href="">recall campaign</a></li>
+            <li><a href="">Creative Gallery</a></li>
+        </ul>
+        <div class="box3">
+            <ul>
+               <li><a  href="#"><i class='fab fa-instagram'></i></a></li>
+               <li><a href="#"><i class='fab fa-facebook-f'></i><a></li>
+               <li> <a  href="#"><i class='fab fa-twitter'></i></a></li>
+               <li><a  href="#" ><i class='fab fa-youtube'></i></a></li>
+            </ul>
+        </div>
+        <ul class="ul2">
+           <a href="#">sitemap</a></li>
+           <li><li><a href="#">disclaimer</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">visit corporate website</a></li>
+           
+       </ul>
+    </footer>
+    </body>
+
+</html>

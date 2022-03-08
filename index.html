@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hondabigwing | Story</title>
+    <link rel="stylesheet" href="SCSS/main.css">
+    <!--icon link-->
+    <script src="https://kit.fontawesome.com/b0e6f5cf89.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--jquery file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--3d model script-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body id="body">
+    <header>
+        <div class="nav"></div>
+        <nav class="navbar">
+           <div class="logo"></div>
+           <ul class="menus">
+               <li><a href="index.html" rel = "home">our story</a></li>
+               <li><a href="#"  rel = "arrow">motorcycles</a></li>
+               <li><a href="Gallery.html">Gallery</a></li>
+               <li><a href="#"  rel = "arrow">reach us</a>
+               </li>
+               <!--menu close-->
+               <li><a href="Booknow.html" style="color:red">Book now</a></li>
+               <li><a href="#" rel = "arrow">services</a></li>
+           </ul>
+           
+           <ul class="icon-box">
+                  <li><a  href="#" rel = "insta"><i class='fab fa-instagram'></i></a></li>
+                  <li><a href="#" rel = "facebook"><i class='fab fa-facebook-f'></i><a></li>
+                  <li> <a  href="#"  rel = "twit"><i class='fab fa-twitter'></i></a></li>
+                  <li><a  href="#" rel = "yt"><i class='fab fa-youtube'></i></a></li>
+            </ul>
+
+            <div class="humbarger">
+                <button id="nav-btn" type="button" rel = "Hum_btn" onclick="openNav()">
+                    <i class='fas fa-align-justify'></i>
+                </button>
+            </div>
+        </nav>
+        <!---------------hidden bikes menu---Use for Small media-------------->
+        <div id="hidden-navbar">
+            <button type="button" id="c-btn" onclick="closeNav()">
+                <i class="fa fa-close"></i>
+            </button>
+             <ul class="box-1">
+                <li><a href="index.html" >our story</a></li>
+                <li><a href="#" >motorcycles</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="#">reach us</a></li>
+                <li><a href="Booknow.html" style="color:red">Book now</a></li>
+                <li><a href="#">services</a></li>
+             </ul>
+             <model-viewer  class="center-fit" src="Motorcycle.glb" alt="A 3D model" auto-rotate camera-controls style="width: 60%; height:84vh; top:0px; position: relative; background-color:#111111;"
+                camera-orbit="-30deg" loading="eager"></model-viewer>
+             </div>
+        </div>
+    </header>
+    <script>
+     
+     function openNav() {
+            let x =  document.getElementById("hidden-navbar").style.visibility= "visible";
+            if(x == "visible"){
+                document.getElementById("body").style.overflow = "hidden";
+            }else{
+                document.getElementById("body").style.overflow = "visible";
+            }
+            
+        }
+    
+
+        function closeNav() {
+            let y = document.getElementById("hidden-navbar").style.visibility = "hidden";
+            if(y == "hidden"){
+                document.getElementById("body").style.overflow = "visible";
+            }else{
+                document.getElementById("body").style.overflow = "hidden";
+            }
+        }
+    
+    </script>
+    <!--main content-->
+     <main>
+         <div class="bgimage"></div>
+          <div class="mob-img"></div>
+
+          <div class="container_first">
+              <div class="div1">
+                <h6>Brand</h6>
+                <h1>PHILOSOPHY</h1>
+              </div>
+              
+              <p class="p1">Everyone has a dream, some goal or activity that gives their life deeper 
+                  meaning and sparks passion. When we pursue our dreams, we feel empowered. This power, 
+                  in turn, connects us to others who share the same dreams. It gives us the strength to 
+                  overcome great challenges. It inspires us to spread the joy of our dreams to other people.
+              </p>
+              <div class="img1">
+                  <img src="./images/our-story1.png" alt="">
+              </div>
+              <p class="p2">Ultimately, the power borne of a dream is a creative force, capable of producing 
+                    revolutionary ideas. Honda encourages all its associates to pursue their dreams. That’s 
+                    why we say we are a company built on dreams. The power of Honda’s dream will continue to 
+                    to new insights and technologies in motorcycles and other fields of mobility. And Honda 
+                    will spread the philosophy of The Power of Dreams across India. A country where a billion 
+                    people carry dreams in their hearts, this philosophy is brought alive by.</p>
+          </div>
+          <!--second conatiner-->
+          <div class="container_second">
+              <div class="box1">
+                    <div class="div1">
+                        <h6>Corporate</h6>
+                        <h1>PHILOSOPHY</h1>
+                    </div>    
+                    <p class="p1">
+                        HMSI operates on a principle, which is followed worldwide by all Honda companies. Maintaining 
+                        a global viewpoint, we are dedicated to supplying products of the highest quality, yet at a
+                        reasonable price for worldwide customer satisfaction.
+                    </p>
+                    <p class="p2">
+                        Honda's philosophy is based on the company's guiding principle and advocates 2 fundamental beliefs:
+                    </p>
+              </div>
+              <div class="box2">
+                  <div class="img">
+                      <img src="./images/our-story2.png" alt="">
+                  </div>
+                  <figcaption>THE JOY OF MANUFACTURING</figcaption>
+                  
+              </div>
+            
+          </div>
+          <!--second container end-->
+          <!--third conatiner-->
+          <div class="container_third">
+                <h1>Respect for the Individual</h1>
+                <p class="p1">Honda recognizes and respects individual differences. 
+                    The respect for individual stems from the following three points:</p>
+                <div class="box1">
+                    <h4>-Initiative</h4>
+                    <h4>-Equality</h4>
+                    <h4>-Trust</h4>
+                </div>
+                <p class="p2">
+                    It is the contribution from each individual in the company that has made our 
+                    company what it is today and that, which will take us into the future.
+                </p>
+                <h1>The Three Joys</h1>
+                <p class="p3">In line with Honda's Philosophy, HMSI conducts all its daily activities in pursuit of the following joys:</p>
+                <div class="box2">
+                    <h4>-The joy of buying high quality products.</h4>
+                    <h4>-The joy of selling high quality products.</h4>
+                    <h4>-The joy of manufacturing high quality products.</h4>
+                </div>
+          </div>
+
+     </main>
+     <!---webssite footer-->
+     <footer>
+         <div class="box1">
+             <img src="./images/honda_logo.png" alt="">
+         </div>
+         <ul class = "ul1">
+             <li><a href="">our story</a></li>
+             <li><a href="">media center</a></li>
+             <li><a href="">gallery</a></li>
+             <li><a href="">contact us</a></li>
+             <li><a href="">recall campaign</a></li>
+             <li><a href="">Creative Gallery</a></li>
+         </ul>
+         <div class="box3">
+             <ul>
+                <li><a  href="#"><i class='fab fa-instagram'></i></a></li>
+                <li><a href="#"><i class='fab fa-facebook-f'></i><a></li>
+                <li> <a  href="#"><i class='fab fa-twitter'></i></a></li>
+                <li><a  href="#" ><i class='fab fa-youtube'></i></a></li>
+             </ul>
+         </div>
+         <ul class="ul2">
+            <a href="#">sitemap</a></li>
+            <li><li><a href="#">disclaimer</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">visit corporate website</a></li>
+            
+        </ul>
+     </footer>
+     
+</body>
+</html>

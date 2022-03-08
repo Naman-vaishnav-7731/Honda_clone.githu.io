@@ -1,0 +1,285 @@
+$bg-color:#111111;
+$head-font:'Fredoka One', 'cursive';
+@mixin w-h($w , $h){
+    width:$w;
+    height:$h;
+}
+
+@mixin reset{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+//this is function for reset
+@mixin li-a-reset{
+    text-decoration:none;
+    list-style:none;
+    color:white;
+}
+
+@mixin flex-box($dis:flex , $fd:row , $jc:start , $ai:start){
+    display:$dis;
+    flex-direction:$fd;
+    justify-content:$jc;
+    align-items:$ai;
+
+}
+
+@mixin flex-box($ai,$jc,$dir){
+    display: flex;
+    flex-direction:$dir;
+    align-items:$ai;
+    justify-content:$jc;
+}
+
+@mixin full-flex-box($dis:flex , $fd:row , $jc:start , $ai:start){
+    display:$dis;
+    flex-direction:$fd;
+    justify-content:$jc;
+    align-items:$ai;
+}
+
+
+
+
+//Honda Website navbar
+@mixin navbar{
+    .nav{
+        background:red;
+        height:16vh;
+        visibility:hidden;
+    }
+    .navbar{
+            background-color: #111111;
+            display:flex;
+            position:fixed;
+            @include w-h(100% , 16vh);
+            z-index:1;
+            top:0;
+            
+            //website brand (logo)- left nav--------
+            div[class = "logo"]{
+                width:15%;
+                background:url("../images/honda_logo.png") no-repeat center;
+                background-size:85px 85px;
+                z-index:999;
+            }
+            
+            //navbar menus - center nav------------
+            ul[class = "menus"]{
+                width:65%;
+                display: flex;
+                @include flex-box(center ,space-around , row);
+                text-transform:uppercase;
+                font-weight:600;
+                //navbar menus child
+                li{list-style:none;}
+                a{ 
+                    text-decoration:none; 
+                    color:#808079;
+                    letter-spacing:1px;
+                    transition:all 0.2s; 
+                }
+                a[rel = "home"]{color:white !important;}
+                a[rel = "home"]:hover{color: black !important;}
+                a:hover{
+                    color:black;
+                    background:white;
+                    padding:10px;
+                    border-radius:30px;
+                    
+                }
+                a[rel="arrow"]{
+                    @include full-flex-box(flex,row,center,center);
+                    i{font-size:2em; margin-left:-5px;}
+                }
+                ul[class="reach_sub_menu"]{
+                    display:flex;
+                    flex-direction:column;
+                    position:absolute;
+                    background:$bg-color;
+                    top:101%; right:28%;
+                    gap:15px;
+                    width:320px;
+                    padding:20px;
+                    border-radius:20px;
+                    outline:2px solid black;
+                    
+                }
+            }
+            
+            //navbar icons right nav------
+            ul[class = "icon-box"]{
+                @include w-h(15% , none);
+                @include flex-box(center,space-evenly,none);
+                display: flex;
+                li{ list-style:none;}
+                a{color:white; font-size:x-large; }
+            }
+            
+            //humburger for small media
+            div[class = "humbarger"]{
+                width:10%;
+                display: flex;
+                @include flex-box(center ,center , row);
+                display: none;
+                button{background-color:#111111; border:none; cursor: pointer;}
+                i{font-size: x-large; padding: 6px; color:white;}
+            }
+    }
+    //navbar media query
+    @media screen and (max-width:898px) {
+        //navbar handel
+        .navbar{
+            div[class = "logo"]{width:60%; margin-left:-40px;}
+            ul[class = "menus"]{display: none;}
+            ul[class = "icon-box"]{width:30%;}
+            div[class = "humbarger"]{ display:flex; width:20%; margin-left:-30px;}
+        }
+    }
+    
+    @media screen and (max-width:527px) {
+        //navbar handele
+        .navbar{
+            div[class = "logo"]{background-position:left;  margin-left:70px; background-size:70px 70px;}
+            ul[class = "menus"]{display: none;}
+            ul[class = "icon-box"]{width:30%; display:none}
+            div[class = "humbarger"]{margin-left:0px;}
+        }
+    }
+    
+    @media screen and (max-width:1060px) {
+        //navbar handel
+        .navbar{ ul[class = "menus"]{ font-weight:600; font-size:small; width:65%} }
+    
+    }
+}
+
+@mixin hidden-nav{
+    $bg-color:#111111;
+    #hidden-navbar{
+        @include w-h(100%,100vh);
+        background:$bg-color;
+        position:fixed;
+        top:0;
+        box-sizing:border-box;
+        display:flex;
+        visibility:hidden;
+        z-index:999;
+        button{
+            position:absolute;
+            background:$bg-color;
+            border-radius:70px;
+            z-index: 1;
+            left: 84%;
+            top: 22px;
+            border:none;
+            cursor: pointer;
+            i{font-size: xx-large;  padding:10px 10px;  color:white;}
+        }
+        .box-1{ width:40%; gap:30px;
+            @include full-flex-box(flex , column ,center, center);
+            li , a{@include li-a-reset;}
+            a{
+                font-size:clamp(1.3rem , 5vw, 1.6rem); 
+                text-transform:capitalize;
+                transition-property: color, font-style,margin-left;
+                transition-duration:2s;
+            }
+            a:hover{color:red; font-style: italic; margin-left:30px;}
+        }
+        .box2{width:60%;}
+    
+    }
+    
+    @media screen and (max-width:378px){
+        #hidden-navbar{flex-direction:column;
+            .box-1{
+                gap: 25px;
+                margin: 116px auto;
+                height: 21vh;
+                position: relative;
+                top: 45px;
+            }
+            .center-fit{margin:auto;  min-width:100%;  padding-bottom:25px;}
+        }
+    }
+}
+
+//Honda Website Footer 
+@mixin footer{
+    footer{
+        display:flex;
+        flex-direction:column;
+        background:url("../images/footerBg.jpg") no-repeat;
+        background-size:cover;
+        height:100vh;
+        margin:150px 0 0 0;
+        gap:0px;
+        .box1{
+            width:80%;
+            display:flex;
+            @include flex-box(center , center , row);
+            margin:auto;
+            height:30vh;
+        }
+        ul{ width:80%;  margin:auto;display:flex;}
+        li{ list-style:none;}
+        a{text-decoration:none; color:white}
+    
+        .ul1{
+            display:flex;
+            @include flex-box(center ,space-around , row);
+            font-size:clamp(15px ,2vw, 18px);
+            text-transform:uppercase;
+            font-family: 'Barlow', sans-serif;
+            font-weight:bold;
+            letter-spacing:1px;
+            
+            height:30vh;
+        }
+        .box3{height:25vh;
+            ul{
+               width:30%;
+               
+               justify-content: space-around;
+               margin-top:10px;
+               a{font-size:clamp(25px ,3vw, 30px);}
+            }
+        }
+    
+        .ul2{
+            height:25vh;
+            @include flex-box(center ,space-around , row);
+            font-size:clamp(14px ,3vw, 16px);
+            text-transform:uppercase;
+            font-family: 'Barlow', sans-serif;
+            font-weight:600;
+            letter-spacing:1px;
+            width:60%;
+            word-spacing:3px;
+        }
+    }
+    //responsive footer code
+    @media screen and (max-width:754px){
+         //footer handele
+         footer{
+             justify-content:space-around;
+             gap:20px;
+            .ul1{
+                flex-direction:column;
+                height:40vh;
+                gap:20px;
+            }
+            .box3{ ul{ gap:20px;}}
+            .ul2{
+                flex-direction:column;
+                height:50vh;
+                gap:15px;
+                width:80%;
+            }
+        }
+    }    
+}

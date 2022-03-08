@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Monoton&family=Noto+Serif&family=Philosopher&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Fredoka+One&family=Monoton&family=Noto+Serif&family=Philosopher&family=Roboto:wght@100&display=swap');
+@import "./css_fun";
+*{@include reset;} //reset all margin and padding
+@include navbar; //navbar 
+@include hidden-nav; //hidden navbar 
+
+$bg-color:#111111;
+body{background:$bg-color;}
+
+
+//main content desing and developing
+main{ 
+        //Background image lp and desktop
+        div[class  = "bgimage"]{
+            box-sizing: border-box;
+            background:url("../images/banner_story.png") no-repeat left top ;
+            height:84vh;
+            background-size:100%;
+            //main text for bgimage
+        }
+        
+        //bgimage for mobile
+        div[class = "mob-img"]{
+            height:84vh;
+            box-sizing:border-box;
+            background:url("../images/mobile_bg.jpg") no-repeat ;
+            background-size:100%;
+            display:none;
+        }
+        
+        $p-color:white;
+        $head-font:'Fredoka One', 'cursive';
+        //container fisrt
+        .container_first{
+             display:grid;
+             margin:0 auto;
+             row-gap:20px;
+             grid-template-rows:60px;
+             width:80%;
+             position: relative;
+             top:100px;
+             color:$p-color;
+             
+
+             div img{
+                 width:100%;
+                 box-sizing: border-box;
+                 border:1px solid $bg-color;
+                 border-radius:10px;
+                }
+
+            p{
+                text-align:justify;
+                font-size:clamp(18px ,3vw, 20px);
+                line-height:1.6rem;
+                word-spacing:2px;
+                font-weight:200;
+                font-family: 'Barlow', sans-serif;
+            }
+
+            .p1{width:80%; position:relative; left:20%;}
+            div[class="div1"]{
+                h1{color:$p-color;  
+                    font-size:clamp(1rem , 10vw, 3rem);
+                    font-family:$head-font;
+                    letter-spacing:3px;
+                  
+                }
+                h6{font-size:clamp(0.3rem , 5vw, 1rem);}
+            }
+        }
+
+        //second container
+        .container_second{
+            display: flex;
+            width:80%;
+            margin:150px auto;
+            .box1{display:flex; flex-direction:column; gap:50px; width:70%;
+                div[class="div1"]{
+                    h1{color:$p-color;  font-size:clamp(1rem , 10vw, 3rem);}
+                    h6{font-size:clamp(0.3rem , 5vw, 1rem); color:white;}
+                }
+
+                p{
+                    text-align:justify;
+                    font-size:clamp(18px ,3vw, 20px);
+                    line-height:1.7rem;
+                    font-weight:200;
+                    font-family: 'Barlow', sans-serif;
+                    color:white;
+                    width:90%;
+                }
+                .p2{ font-weight:600; letter-spacing:1px;}
+            }
+            //box2
+            .box2{ width:30%;  display:flex; flex-direction:column;
+               .img{img{width:100%;} }
+                figcaption{
+                   color:red;
+                   margin:0 auto;
+                   font-family: 'Barlow', sans-serif;
+                   font-size:clamp(15px ,3vw, 19px);
+                   font-weight:bold;
+                   letter-spacing:2px;
+                }
+            }
+        }
+        //third container
+        .container_third{
+            color:white;
+            display:grid;
+            gap:25px;
+            width:80%;
+            margin:-80px auto;
+
+            h1{ font-size:clamp(30px ,3vw, 35px); }
+           
+            p{
+                text-align:justify;
+                font-size:clamp(18px ,3vw, 20px);
+                line-height:1.7rem;
+                font-weight:200;
+                font-family: 'Barlow', sans-serif;
+                color:white;
+                width:90%;
+            }
+
+            h4{
+                font-size:clamp(16px ,3vw, 20px);
+                font-style:italic;
+                font-family: 'Barlow', sans-serif;
+                font-weight:bold;
+                line-height:1.8rem;
+                letter-spacing:1px;
+            }
+        }
+}
+
+
+//website footer coding
+footer{
+    display:flex;
+    flex-direction:column;
+    background:url("../images/footerBg.jpg") no-repeat;
+    background-size:cover;
+    height:100vh;
+    margin:150px 0 0 0;
+    gap:0px;
+    .box1{
+        width:80%;
+        display:flex;
+        @include flex-box(center , center , row);
+        margin:auto;
+        height:30vh;
+    }
+    ul{ width:80%;  margin:auto;display:flex;}
+    li{ list-style:none;}
+    a{text-decoration:none; color:white}
+
+    .ul1{
+        display:flex;
+        @include flex-box(center ,space-around , row);
+        font-size:clamp(15px ,2vw, 18px);
+        text-transform:uppercase;
+        font-family: 'Barlow', sans-serif;
+        font-weight:bold;
+        letter-spacing:1px;
+        
+        height:30vh;
+    }
+    .box3{height:25vh;
+        ul{
+           width:30%;
+           
+           justify-content: space-around;
+           margin-top:10px;
+           a{font-size:clamp(25px ,3vw, 30px);}
+        }
+    }
+
+    .ul2{
+        height:25vh;
+        @include flex-box(center ,space-around , row);
+        font-size:clamp(14px ,3vw, 16px);
+        text-transform:uppercase;
+        font-family: 'Barlow', sans-serif;
+        font-weight:600;
+        letter-spacing:1px;
+        width:60%;
+        word-spacing:3px;
+    }
+}
+
+//media query coding
+@media screen and (max-width:898px) {
+    //navbar handel
+    .navbar{
+        div[class = "logo"]{width:60%; margin-left:-40px;}
+        ul[class = "menus"]{display: none;}
+        ul[class = "icon-box"]{width:30%;}
+        div[class = "humbarger"]{ display:flex; width:20%; margin-left:-30px;}
+    }
+}
+
+@media screen and (max-width:527px) {
+    //navbar handele
+    .navbar{
+        div[class = "logo"]{background-position:left;  margin-left:70px; background-size:70px 70px;}
+        ul[class = "menus"]{display: none;}
+        ul[class = "icon-box"]{width:30%; display:none}
+        div[class = "humbarger"]{margin-left:0px;}
+    }
+}
+
+@media screen and (max-width:1024px) {
+    //navbar handel
+    .navbar{ ul[class = "menus"]{ font-weight:600; font-size:small; width:65%} }
+
+}
+
+
+@media screen and (max-width:525px) {
+    //web main content 
+    main{ 
+        div[class  = "bgimage"]{display:none;}
+        div[class = "mob-img"]{display:flex;
+        background-size:100% 70%;
+        }
+        .container_first{width:80%;
+           .p1{width:100%;left:0}
+        }
+        .container_second{
+            width:90%;
+            flex-direction:column;
+
+            .box1{ width:100%; justify-content: center; margin:auto; gap:15px;
+                p{width:100%;}
+                .p2{ font-weight:600; letter-spacing:1px;}
+            }
+           
+        }
+        .container_third{margin:-110px auto;}
+    }
+}
+
+@media screen and (max-width:754px){
+    main{ 
+        .container_second{
+            width:90%;
+            flex-direction:column;
+            gap:20px;
+
+            .box1{ width:90%; justify-content: center; margin:auto; gap:15px;
+                p{width:100%;}
+                .p2{ font-weight:600; letter-spacing:1px;}
+            }
+
+            .box2{
+                width:90%;
+                margin:auto;
+                display:flex;
+                flex-direction:column;
+                .img{
+                    img{width:100%; padding:0 20px 0 20px;}
+                }
+             }
+            }
+     }
+     //footer handele
+     footer{
+         justify-content:space-around;
+         gap:20px;
+        .ul1{
+            flex-direction:column;
+            height:40vh;
+            gap:20px;
+        }
+        .box3{ ul{ gap:20px;}}
+        .ul2{
+            flex-direction:column;
+            height:50vh;
+            gap:15px;
+            width:80%;
+        }
+    }
+}
+
+
+
